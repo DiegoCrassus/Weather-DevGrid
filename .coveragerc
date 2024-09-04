@@ -1,0 +1,12 @@
+[run]
+omit =
+    src/api/project/repository/database.py
+    tests/*
+    src/api/project/restx.py
+    src/api/project/exception/*
+    src/api/project/utils/response.py
+
+[report]
+exclude_lines =
+    if __name__ == .__main__.:
+    pragma: no cover

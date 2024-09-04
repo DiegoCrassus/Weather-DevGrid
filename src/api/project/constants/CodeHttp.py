@@ -1,0 +1,27 @@
+class CodeHttp:
+    class ERROR:
+        INTERNAL_ERROR = "500"
+        CONTINUE = "100"
+        SWITCHING_PROTOCOLS = "101"
+        NON_AUTHORITATIVE_INFORMATION = "203"
+        NO_CONTENT = "204"
+        RESET_CONTENT = "205"
+        PARTIAL_CONTENT = "206"
+        NOT_MODIFIED = "304"
+        USE_PROXY_NOT_SET = "305"
+        BAD_REQUEST = "400"
+        UNAUTHORIZED = "401"
+        PAYMENT_REQUIRED = "402"
+        FORBIDDEN = "403"
+        NOT_FOUND = "404"
+        PROXY_AUTHENTICATION_REQUIRED = "407"
+        REQUEST_TIMEOUT = "408"
+        CONFLICT = "409"
+        BAD_GATEWAY = "502"
+        SERVICE_UNAVAILABLE = "503"
+        GATEWAY_TIMEOUT = "504"
+
+    class SUCCESS:
+        OK = "200"
+        CREATED = "201"
+        ACCEPTED = "202"

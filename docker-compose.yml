@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  back:
+    build: .
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    ports:
+      - 5000:5000
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: post2024
+      POSTGRES_DB: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data+
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  postgres_data:
